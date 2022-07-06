@@ -17,6 +17,7 @@
                BackgroundColor="DarkBlue"/>
         <Label
             FontSize="20"
+            Margin="7"
             Text="Please Choose an Aircraft from the drop down menu and select whether you would like to takeoff or landing then proceed to the Location Page"
           TextColor="White"
                BackgroundColor="DarkBlue"
@@ -26,7 +27,7 @@
         <StackLayout Margin="1"
                      >
             
-            <Label Text=" Aircraft Selection"
+            <Label Text="Aircraft Selection"
                    TextColor="White"
                    TextDecorations="Underline"
                    FontSize="25"/>
