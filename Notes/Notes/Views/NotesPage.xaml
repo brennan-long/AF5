@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.Views.NotesPage"
+             Title="Home"
+             >
+      <StackLayout 
+        BackgroundColor="DarkBlue"
+        Spacing="10">
+
+        <Label Text="Welcome To Our Project"
+               FontSize="27"
+               CharacterSpacing="1"
+               TextDecorations="Underline"
+               TextTransform="Uppercase"
+               TextColor="White"
+               BackgroundColor="DarkBlue"/>
+        <Label
+            FontSize="20"
+            Text="Please Choose an Aircraft from the drop down menu and select whether you would like to takeoff or landing then proceed to the Location Page"
+          TextColor="White"
+               BackgroundColor="DarkBlue"
+            />
+        
+
+        <StackLayout Margin="1"
+                     >
+            
+            <Label Text=" Aircraft Selection"
+                   TextColor="White"
+                   TextDecorations="Underline"
+                   FontSize="25"/>
+            
+            <Picker Title=" Select"
+                    TitleColor="White"
+                    TextColor="White">
+                <Picker.Items>
+                    <x:String>Select</x:String>
+                    <x:String>C-5</x:String>
+                    <x:String>C-17</x:String>
+                    <x:String>C-130</x:String>
+                    <x:String>F-15</x:String>
+                    <x:String>E-8</x:String>
+                   </Picker.Items>                
+            </Picker>
+          
+            <Grid HeightRequest="60"
+                ColumnDefinitions="*,*">
+                <Button Text="Takeoff"
+                    Clicked="OnSaveButtonClicked" />
+                <Button Grid.Column="1"
+                    Text="Landing"
+                    Clicked="OnDeleteButtonClicked"/>
+
+            </Grid>
+            <Image 
+                Source="goodhomepic.png"
+                BackgroundColor="DarkBlue"
+                WidthRequest="700"
+                HeightRequest="275"/>
+        </StackLayout>
+       </StackLayout>
+ </ContentPage>

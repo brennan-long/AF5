@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.Views.AboutMePage"
+             Title="About Me"
+                BackgroundColor="Black">
+    <!-- Layout children in two rows -->
+    <ScrollView>
+        <Grid RowDefinitions="Auto,*">
+        
+        <!-- Layout children vertically -->
+        <StackLayout Grid.Row="1"
+                     Margin="19"
+                     Spacing="19">
+            <Label FontSize="22">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="About Me"
+                                  FontAttributes="Bold"
+                                  FontSize="26" 
+                                  TextColor="White"
+                                  BackgroundColor="{OnPlatform iOS=LightSlateGray, Android=#910}"  />
+                            <Span Text=" " />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Text="Hello, my name is Brennan Long. I graduated from Warner Robins High School. I am going to Georgia Tech as a Biomedical Engineer. I am a back-to-back 5A State Champion in football. And I love Spray Painting.;)"
+                    FontSize="20"
+                   TextColor="White"
+                   BackgroundColor="{OnPlatform iOS=LightSlateGray, Android=#910}"/>
+              <Button Text="Some of My Spray Paint Art"                    
+                    Clicked="OnButtonClicked_1"/>
+            <Button Text="Art Instagram"                    
+                    Clicked="OnButtonClicked_2"/>            
+            <Image Source="georgiatech.png"
+               BackgroundColor="{OnPlatform iOS=LightSlateGray, Android=#948}"
+               Background="DarkBlue"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+                HeightRequest="200"/>
+                <Image Source="wrhsstate.jfif"
+               BackgroundColor="{OnPlatform iOS=LightSlateGray, Android=#948}"
+               Background="DarkRed"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+                HeightRequest="200"/>
+              <Button Text="About My Major"                    
+                    Clicked="OnButtonClicked_3"/>
+                <Button Text="Favorite Music"                    
+                    Clicked="OnButtonClicked_4"/>
+                <Image Source="biomedpic.jfif"
+               BackgroundColor="{OnPlatform iOS=LightSlateGray, Android=#948}"
+               Background="Green"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+                HeightRequest="200"/>
+                <Image Source="sp.jfif"
+               BackgroundColor="{OnPlatform iOS=LightSlateGray, Android=#948}"
+               Background="Yellow"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+                HeightRequest="200"/>
+                <Button Text="More About Me"                    
+                    Clicked="OnButtonClicked"/>
+
+            </StackLayout>
+    </Grid>
+        </ScrollView>
+</ContentPage>
