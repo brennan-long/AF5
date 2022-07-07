@@ -4,10 +4,14 @@
        xmlns:views="clr-namespace:Notes.Views"
        x:Class="Notes.AppShell">
     <!-- Display a bottom tab bar containing two tabs -->
-    <TabBar>
-        <ShellContent Title="Notes"
+    <TabBar >
+        <ShellContent Title="Notes"                      
                       Icon="icon_feed.png"
-                      ContentTemplate="{DataTemplate views:NotesPage}" />
+                      ContentTemplate="{DataTemplate views:NotesPage}" 
+                      />
+        <ShellContent Title="Location"
+                      Icon="icon_feed.png"
+                      ContentTemplate="{DataTemplate views:Location}" />
         <ShellContent Title="About"
                       Icon="icon_about.png"
                       ContentTemplate="{DataTemplate views:AboutPage}" />
