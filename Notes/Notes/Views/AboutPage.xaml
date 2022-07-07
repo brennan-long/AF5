@@ -5,10 +5,11 @@
              Title="Calculations">
     <!-- Layout children in two rows -->
     <Grid RowDefinitions="Auto,*">
-        <Image Source="xamarin_logo.png"
-               BackgroundColor="{OnPlatform iOS=LightSlateGray, Android=#2196F3}"
-               VerticalOptions="Center"
-               HeightRequest="64" />
+        
+        <Label Text="Current Aircraft Weight"
+               TextColor="Blue"
+               FontSize="16"
+               BackgroundColor="DarkGray"/>
         <!-- Layout children vertically -->
         <StackLayout Grid.Row="1"
                      Margin="20"
