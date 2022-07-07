@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.Views.AboutPage"
-             Title="About">
+             Title="Calculations">
     <!-- Layout children in two rows -->
     <Grid RowDefinitions="Auto,*">
         <Image Source="xamarin_logo.png"
@@ -13,21 +13,62 @@
         <StackLayout Grid.Row="1"
                      Margin="20"
                      Spacing="20">
-            <Label FontSize="22">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="Notes"
-                                  FontAttributes="Bold"
-                                  FontSize="22" />
-                            <Span Text=" v1.0" />
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label Text="This app is written in XAML and C# with the Xamarin Platform." />
-            <Button Text="Learn more"
-                    Clicked="OnButtonClicked" />
+
+            <Label Text="Loading Slot 1"
+                   TextColor="Black"
+                   TextDecorations="Underline"
+                   FontSize="20"/>
+            <Picker Title="Select"
+                TitleColor="Black"
+                TextColor="Black">
+
+                                <Picker.Items>
+                                    <x:String>Select</x:String>
+                                    <x:String>Humvee</x:String>
+                                    <x:String>M1 Tank</x:String>
+                                    <x:String>UH-60 Blackhawk</x:String>
+                                    <x:String>Styker ICV</x:String>
+                                    <x:String>CV90</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+            <Label Text="Loading Slot 2"
+                   TextColor="Black"
+                   TextDecorations="Underline"
+                   FontSize="20"/>
+            <Picker Title="Select"
+                TitleColor="Black"
+                TextColor="Black">
+
+                <Picker.Items>
+                    <x:String>Select</x:String>
+                    <x:String>Humvee</x:String>
+                    <x:String>M1 Tank</x:String>
+                    <x:String>UH-60 Blackhawk</x:String>
+                    <x:String>Styker ICV</x:String>
+                    <x:String>CV90</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Loading Slot 3"
+                   TextColor="Black"
+                   TextDecorations="Underline"
+                   FontSize="20"/>
+            <Picker Title="Select"
+                TitleColor="Black"
+                TextColor="Black">
+
+                <Picker.Items>
+                    <x:String>Select</x:String>
+                    <x:String>Humvee</x:String>
+                    <x:String>M1 Tank</x:String>
+                    <x:String>UH-60 Blackhawk</x:String>
+                    <x:String>Styker ICV</x:String>
+                    <x:String>CV90</x:String>
+                </Picker.Items>
+            </Picker>
+
+
         </StackLayout>
     </Grid>
 </ContentPage>
