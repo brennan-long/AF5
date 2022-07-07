@@ -26,7 +26,7 @@
         <StackLayout Margin="1"
                      >
             
-            <Label Text=" Aircraft Selection"
+            <Label Text="Aircraft Selection"
                    TextColor="White"
                    TextDecorations="Underline"
                    FontSize="25"/>
