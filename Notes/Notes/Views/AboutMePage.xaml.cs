@@ -17,7 +17,7 @@ namespace Notes.Views
         }
         async void OnButtonClicked_1(object sender, EventArgs e)
         {
-            await Launcher.OpenAsync("https://www.etsy.com/shop/BrennansSpace?ref=seller-platform-mcnav");
+            await Launcher.OpenAsync("https://www.instagram.com/_im.brandon._/");
         }
         async void OnButtonClicked_2(object sender, EventArgs e)
         {
@@ -25,7 +25,7 @@ namespace Notes.Views
         }
         async void OnButtonClicked_3(object sender, EventArgs e)
         {
-            await Launcher.OpenAsync("https://www.mtu.edu/biomedical/department/what-is/");
+            await Launcher.OpenAsync("https://en.wikipedia.org/wiki/402nd_Maintenance_Wing");
         }
         async void OnButtonClicked_4(object sender, EventArgs e)
         {
