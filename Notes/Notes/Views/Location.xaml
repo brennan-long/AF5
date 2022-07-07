@@ -2,37 +2,62 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.Views.Location"
-             Title="Location"
-             BackgroundColor="Red"
-             >
-
-    <Grid>
-        <StackLayout Grid.RowSpan="1">
-            <Label Text="Choose A Location "
-               FontAttributes="Bold"
-               FontSize="30"
-               TextColor="White"
-               HorizontalTextAlignment="Center"   
+             Title="Location"       >
+    <Grid RowDefinitions="100"
+           BackgroundColor="Red">      
+        <Picker Title=" Select A Location"
+                    TitleColor="White"
+                    TextColor="White"
                 VerticalOptions="Start"
-               
-             />
-            <Label Text="Hello" 
-                   FontSize="25"
-                   TextColor="White"
-                   BackgroundColor="Black"
-                   HeightRequest="75"
-                   />
-            <Label Text="Hello" 
-                   FontSize="25"
-                   TextColor="White"
-                   BackgroundColor="Black"
-                   HeightRequest="75"
-                   />
-            <Label Text="Test"
-                />
+                FontSize="22">
+            <Picker.Items>
+                <x:String>Select</x:String>
+                <x:String>Robins Air Force Base</x:String>
+                <x:String>Hill Air Force Base</x:String>
+                <x:String>Tinker Air Force Base</x:String>
+                <x:String>Shaw Air Force Base</x:String>
+                <x:String>Atlanta International Airport</x:String>
+            </Picker.Items>
+        </Picker>
+        
+        <Picker Title=" Select A Runway"
+                    TitleColor="White"
+                    TextColor="White"
+                VerticalOptions="End"
+                FontSize="22"
+                     >
+            <Picker.Items>
+                <x:String>Select</x:String>
+                <x:String>C-5</x:String>
+                <x:String>C-17</x:String>
+                <x:String>C-130</x:String>
+                <x:String>F-15</x:String>
+                <x:String>E-8</x:String>
+            </Picker.Items>
+        </Picker>
 
+
+
+        <StackLayout Grid.Row="1"
+                     Margin="10"
+                     Spacing="15"
+                     BackgroundColor="White">
+            <Label FontSize="22">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Notes"
+                                  FontAttributes="Bold"
+                                  FontSize="22" />
+                            <Span Text=" v1.0" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Text="This app is written in XAML and C# with the Xamarin Platform." />           
         </StackLayout>
     </Grid>
 </ContentPage>
+
     
     
