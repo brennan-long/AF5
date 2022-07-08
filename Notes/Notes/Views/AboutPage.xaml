@@ -2,25 +2,62 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.Views.AboutPage"
-             Title="Calculations">
+             Title="Calculations"
+             BackgroundColor="White"
+             >
     <!-- Layout children in two rows -->
     <Grid RowDefinitions="Auto,*">
-        <Image Source="xamarin_logo.png"
-               BackgroundColor="{OnPlatform iOS=LightSlateGray, Android=#2196F3}"
-               VerticalOptions="Center"
-               HeightRequest="64" />
-        <!-- Layout children vertically -->
         <StackLayout Grid.Row="1"
                      Margin="20"
-                     Spacing="20">
+                     Spacing="20"
+                     
+                     >
+        <Label Text ="Current Aircraft Weight"
+               TextDecorations="None"
+               FontSize="16"
+               FontAttributes="Bold"
+               Margin="0"
+               />
+        <Label Text="                                                                                                                                          "
+               FontSize="30"
+               TextDecorations="Underline"
+               BackgroundColor="DarkGray"/>
 
+            <Label Text ="Balance Results"
+               TextDecorations="None"
+               FontSize="16"
+                   FontAttributes="Bold"
+               />
+            <Label Text="                                                                                                                                          "
+               FontSize="30"
+               TextDecorations="Underline"
+                   BackgroundColor="DarkGray"/>
+
+            <Label Text ="Takeoff Recomendations"
+               TextDecorations="None"
+               FontSize="16"
+                  FontAttributes="Bold"
+               />
+            <Label Text="                                                                                                                                          "
+               FontSize="30"
+               TextDecorations="Underline"
+                   BackgroundColor="DarkGray"/>
+        </StackLayout>
+
+        <!-- Layout children vertically -->
+
+        <StackLayout Grid.Row="2"
+                     Margin="20"
+                     Spacing="20">
             <Label Text="Loading Slot 1"
                    TextColor="Black"
                    TextDecorations="Underline"
-                   FontSize="20"/>
+                   FontSize="17"/>
             <Picker Title="Select"
                 TitleColor="Black"
                 TextColor="Black">
+                
+                
 
                                 <Picker.Items>
                                     <x:String>Select</x:String>
@@ -35,7 +72,7 @@
             <Label Text="Loading Slot 2"
                    TextColor="Black"
                    TextDecorations="Underline"
-                   FontSize="20"/>
+                   FontSize="17"/>
             <Picker Title="Select"
                 TitleColor="Black"
                 TextColor="Black">
@@ -53,7 +90,7 @@
             <Label Text="Loading Slot 3"
                    TextColor="Black"
                    TextDecorations="Underline"
-                   FontSize="20"/>
+                   FontSize="17"/>
             <Picker Title="Select"
                 TitleColor="Black"
                 TextColor="Black">
