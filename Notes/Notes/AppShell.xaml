@@ -12,10 +12,10 @@
         <ShellContent Title="Location"
                       Icon="icon_feed.png"
                       ContentTemplate="{DataTemplate views:Location}" />
-        <ShellContent Title="About"
+        <ShellContent Title="Calculations"
                       Icon="icon_about.png"
                       ContentTemplate="{DataTemplate views:AboutPage}" />
-        <ShellContent Title="About Me"
+        <ShellContent Title="Info"
                       Icon="icon_about.png"
                       ContentTemplate="{DataTemplate views:AboutMePage}" />
     </TabBar>
