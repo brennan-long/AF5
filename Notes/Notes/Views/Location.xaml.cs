@@ -16,18 +16,17 @@ namespace Notes.Views
         public Location()
         {
             InitializeComponent();
+           
         }
-    }
-    class Program
+    } 
+    public static class lol
     {
-        static void Main(String[] args)
+        public static void run()
         {
-            HtmlAgilityPack.HtmlWeb web = new HtmlAgilityPack.HtmlWeb;
-            HtmlAgilityPack.HtmlDocument doc = web.Load("https://www.weatherbug.com/weather-forecast/now/robins-air-force-base-ga-31098");
-            foreach (var item in doc.DocumentNode.SelectNodes("/html/body/main/section[1]/div[2]/div/div[2]/div/div[2]/div/div/div/div/div/div/div/div/ul/li[1]/div/div/div/current-conditions-widget/div/div/div[1]"))
-            {
+            HtmlWeb web = new HtmlWeb();
+            HtmlDocument doc = web.Load("https://www.airnav.com/airport/KHIF");
+            var hilldim1 = doc.DocumentNode.SelectNodes("/html/body/table[5]/tr/td[1]/table[6]/tr[1]/td[2]")[0].InnerText;
 
-            }
         }
     }
 }
