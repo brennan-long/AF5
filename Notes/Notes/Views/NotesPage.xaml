@@ -31,7 +31,7 @@
                    TextColor="White"
                    TextDecorations="Underline"
                    FontSize="25"/>
-            
+
             <Picker Title=" Select"
                     TitleColor="White"
                     TextColor="White">

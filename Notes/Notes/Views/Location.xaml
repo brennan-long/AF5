@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
              x:Class="Notes.Views.Location"
              Title="Location"       >
     <Grid RowDefinitions="100"
@@ -35,14 +35,39 @@
                 <x:String>E-8</x:String>
             </Picker.Items>
         </Picker>
-
+        
 
 
         <StackLayout Grid.Row="1"
-                     Margin="10"
+                     Margin="5"
                      Spacing="15"
                      BackgroundColor="White">
+            <Label Text="Location:"
+                   FontSize="20">
+
+            </Label>
+            <Label Text=""
+                   FontSize="15"
+               x:Name="dimensionsLabel"/>
+
+            <Label Text="Temperature:"
+                   FontSize="20">
+
+            </Label>
+            <Label Text=""
+                   FontSize="15"
+               x:Name="dimensionsLabel"/>
+
+            <Label Text="Dimensions:"
+                   FontSize="20">
+
+                
+            </Label>
+            <Label Text=""
+                   FontSize="15"
+               x:Name="dimensionsLabel"/>
             <Label FontSize="22">             
+                
             </Label>
        </StackLayout>
     </Grid>

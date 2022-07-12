@@ -6,11 +6,11 @@
     <!-- Display a bottom tab bar containing two tabs -->
     <TabBar >
         <ShellContent Title="Notes"                      
-                      Icon="icon_feed.png"
+                      Icon="igloo.png"
                       ContentTemplate="{DataTemplate views:NotesPage}" 
                       />
         <ShellContent Title="Location"
-                      FontImageSource
+                      Icon="compass.png"
                       ContentTemplate="{DataTemplate views:Location}" />
         <ShellContent Title="Calculations"
                       Icon="icon_about.png"
