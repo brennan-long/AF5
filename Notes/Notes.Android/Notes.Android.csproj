@@ -142,9 +142,6 @@
     <AndroidResource Include="Resources\drawable\igloo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\compass-drafting-solid.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\compass.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
