@@ -11,19 +11,17 @@ using HtmlAgilityPack;
 
 namespace Notes.Views
 {
-    
+
 
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Location : ContentPage
     {
-        
+
         public Location()
         {
             InitializeComponent();
-           
-        }
-    
-    }
-}
 
+        } }}
+    
+    

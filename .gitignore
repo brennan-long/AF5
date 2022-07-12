@@ -18,6 +18,7 @@ obj/
 *.sln.docstates
 
 # User-specific files (MonoDevelop/Xamarin Studio)
+.vs/
 
 .vs/
 # Mono auto generated files
