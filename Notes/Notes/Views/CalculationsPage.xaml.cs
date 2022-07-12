@@ -6,23 +6,15 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using HtmlAgilityPack;
-
 
 namespace Notes.Views
 {
-    
-
-
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Location : ContentPage
+    public partial class CalculationsPage : ContentPage
     {
-        
-        public Location()
+        public CalculationsPage()
         {
-            
             InitializeComponent();
         }
-    
     }
 }
