@@ -42,20 +42,9 @@
                      Margin="10"
                      Spacing="15"
                      BackgroundColor="White">
-            <Label FontSize="22">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="Notes"
-                                  FontAttributes="Bold"
-                                  FontSize="22" />
-                            <Span Text=" v1.0" />
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
+            <Label FontSize="22">             
             </Label>
-            <Label Text="This app is written in XAML and C# with the Xamarin Platform." />           
-        </StackLayout>
+       </StackLayout>
     </Grid>
 </ContentPage>
 

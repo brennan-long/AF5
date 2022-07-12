@@ -10,7 +10,7 @@
                       ContentTemplate="{DataTemplate views:NotesPage}" 
                       />
         <ShellContent Title="Location"
-                      Icon="icon_feed.png"
+                      FontImageSource
                       ContentTemplate="{DataTemplate views:Location}" />
         <ShellContent Title="Calculations"
                       Icon="icon_about.png"
