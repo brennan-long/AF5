@@ -20,6 +20,7 @@ obj/
 # User-specific files (MonoDevelop/Xamarin Studio)
 .vs/
 
+.vs/
 # Mono auto generated files
 mono_crash.*
 

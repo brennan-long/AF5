@@ -48,10 +48,12 @@
             <Grid HeightRequest="60"
                 ColumnDefinitions="*,*">
                 <Button Text="Takeoff"
-                    Clicked="OnSaveButtonClicked" />
+                    Clicked="OnButtonClicked_T"
+                        />
                 <Button Grid.Column="1"
                     Text="Landing"
-                    Clicked="OnDeleteButtonClicked"/>
+                    Clicked="OnButtonClicked_L"
+                        />
 
             </Grid>
             <Image 
