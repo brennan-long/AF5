@@ -31,18 +31,11 @@
                    TextColor="White"
                    TextDecorations="Underline"
                    FontSize="25"/>
-            
+
             <Picker Title=" Select"
                     TitleColor="White"
-                    TextColor="White">
-                <Picker.Items>
-                    <x:String>Select</x:String>
-                    <x:String>C-5</x:String>
-                    <x:String>C-17</x:String>
-                    <x:String>C-130</x:String>
-                    <x:String>F-15</x:String>
-                    <x:String>E-8</x:String>
-                   </Picker.Items>                
+                    TextColor="White"
+                    x:Name="picker1">
             </Picker>
           
             <Grid HeightRequest="60"

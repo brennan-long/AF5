@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.Views.AboutPage"
              Title="Calculations"
-             BackgroundColor="White"
+             BackgroundColor="DimGray"
              >
     <!-- Layout children in two rows -->
     <Grid RowDefinitions="Auto,*">
@@ -17,16 +17,19 @@
                FontSize="16"
                FontAttributes="Bold"
                Margin="0"
+               TextColor="White"
                />
         <Label Text="                                                                                                                                          "
                FontSize="30"
                TextDecorations="Underline"
-               BackgroundColor="DarkGray"/>
+               BackgroundColor="DarkGray"
+               x:Name="aircraftWeight"/>
 
             <Label Text ="Balance Results"
                TextDecorations="None"
                FontSize="16"
                    FontAttributes="Bold"
+                   TextColor="White"
                />
             <Label Text="                                                                                                                                          "
                FontSize="30"
@@ -37,6 +40,7 @@
                TextDecorations="None"
                FontSize="16"
                   FontAttributes="Bold"
+                   TextColor="White"
                />
             <Label Text="                                                                                                                                          "
                FontSize="30"
@@ -50,11 +54,11 @@
                      Margin="20"
                      Spacing="20">
             <Label Text="Loading Slot 1"
-                   TextColor="Black"
+                   TextColor="White"
                    TextDecorations="Underline"
                    FontSize="17"/>
             <Picker Title="Select"
-                TitleColor="Black"
+                TitleColor="White"
                 TextColor="Black">
                 
                 
@@ -70,11 +74,11 @@
                             </Picker>
 
             <Label Text="Loading Slot 2"
-                   TextColor="Black"
+                   TextColor="White"
                    TextDecorations="Underline"
                    FontSize="17"/>
             <Picker Title="Select"
-                TitleColor="Black"
+                TitleColor="White"
                 TextColor="Black">
 
                 <Picker.Items>
@@ -88,11 +92,11 @@
             </Picker>
 
             <Label Text="Loading Slot 3"
-                   TextColor="Black"
+                   TextColor="White"
                    TextDecorations="Underline"
                    FontSize="17"/>
             <Picker Title="Select"
-                TitleColor="Black"
+                TitleColor="White"
                 TextColor="Black">
 
                 <Picker.Items>
@@ -104,8 +108,9 @@
                     <x:String>CV90</x:String>
                 </Picker.Items>
             </Picker>
-
+      
 
         </StackLayout>
     </Grid>
 </ContentPage>
+    
