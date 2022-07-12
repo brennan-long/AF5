@@ -6,6 +6,7 @@
         <ResourceDictionary>
             <Color x:Key="Primary">#FF00008B</Color>
             
+           
              <x:String x:Key="CompassIcon">&#xf568;</x:String>
         </ResourceDictionary>
     </Application.Resources>
