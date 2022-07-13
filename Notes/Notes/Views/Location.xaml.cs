@@ -21,6 +21,7 @@ namespace Notes.Views
         public Location()
         {
             InitializeComponent();
+        }
        
             public static class lol
         {
