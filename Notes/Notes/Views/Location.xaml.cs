@@ -23,6 +23,15 @@ namespace Notes.Views
             InitializeComponent();
 
 
+<<<<<<< HEAD
+=======
+
+        }
+
+    }
+}
+=======
+>>>>>>> 4fa0fc79d54adb349540e19ad44a287cfdbcecfd
         }
 
     }
@@ -40,5 +49,26 @@ namespace Notes.Views
             }
         }
     
+<<<<<<< HEAD
 
+=======
+    
+
+=======
+        }
+            public static class lol
+        {
+            public static void run()
+            {
+                HtmlWeb web = new HtmlWeb();
+                HtmlDocument doc = web.Load("https://www.airnav.com/airport/KHIF");
+                var hilldim1 = doc.DocumentNode.SelectNodes("/html/body/table[5]/tr/td[1]/table[6]/tr[1]/td[2]")[0].InnerText;
+
+            }
+        }
+    }
+}
+    
+    
+>>>>>>> 4fa0fc79d54adb349540e19ad44a287cfdbcecfd
 
