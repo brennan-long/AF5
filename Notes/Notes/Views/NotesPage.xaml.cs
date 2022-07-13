@@ -13,7 +13,8 @@ namespace Notes.Views
             InitializeComponent();
             plane[] planes =
             {
-                new plane("ldjfa", "adfawef"),
+
+                new plane("Select","Num2","hmm","bruh"),
             };
 
             picker1.ItemsSource = planes;
@@ -33,22 +34,37 @@ namespace Notes.Views
 
     public class plane
     {
-        string weight;
+
+        string name;
+        string baseweight;
+        string maxweight;
         string slots;
-        public plane(string w, string s)
+        string takeoffdistance;
+        string landingdistance;
+        
+        public plane(string n, string bw, string mw, string s, string td, string ld)
         {
-            weight = w;
+            name = n;
+            baseweight = bw;
+            maxweight = mw;
             slots = s;
+            takeoffdistance = td;
+            landingdistance = ld;
         }
 
+        public string Name()
+        {
+            return name;
+        }
         public string calculate(int num)
         {
-            return weight + num;
+            return baseweight + num;
         }
 
-        public override string ToString()
+        public override  string ToString()
         {
-            return weight;
+            return maxweight;
+
         }
     }
        

@@ -48,7 +48,9 @@
                FontSize="30"
                TextDecorations="Underline"
                    BackgroundColor="DarkGray"
-                   x:Name="takeoffRecomendations"/>
+                   x:Name="takeoffRecomendations"
+                   TextColor="Green"/>
+
         </StackLayout>
 
         <!-- Layout children vertically -->
