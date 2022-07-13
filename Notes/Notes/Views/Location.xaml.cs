@@ -21,9 +21,12 @@ namespace Notes.Views
         public Location()
         {
             InitializeComponent();
-        }
-       
-            public static class lol
+        } 
+
+
+        
+        
+         public static class lol
         {
             public static void run()
             {
@@ -36,5 +39,5 @@ namespace Notes.Views
     }
 }
     
-    
+  
 
