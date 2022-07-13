@@ -13,7 +13,7 @@ namespace Notes.Views
             InitializeComponent();
             plane[] planes =
             {
-                new plane("ldjfa", "adfawef"),
+                new plane("Select", "C-5"),
             };
 
             picker1.ItemsSource = planes;
