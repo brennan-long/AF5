@@ -14,7 +14,8 @@ namespace Notes.Views
             plane[] planes =
             {
 
-                new plane("Select","Num2","hmm","bruh"),
+                new plane("C5","400,000","hm12","bruh", "wow", "wind"),
+                new plane("F-15", "1500", "2 Slots", "other things", "yea", "this sucks")
             };
 
             picker1.ItemsSource = planes;
@@ -54,7 +55,7 @@ namespace Notes.Views
 
         public string Name()
         {
-            return name;
+            return maxweight;
         }
         public string calculate(int num)
         {
@@ -63,9 +64,22 @@ namespace Notes.Views
 
         public override  string ToString()
         {
-            return maxweight;
+            return name;
 
         }
+        public string Slots()
+        {
+            return slots;
+        }
+        public string Takeoff()
+        {
+            return takeoffdistance;
+        }
+        public string Landing()
+        {
+            return landingdistance;
+        }
+
     }
        
 }
