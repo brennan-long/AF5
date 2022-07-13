@@ -11,9 +11,13 @@ namespace Notes.Views
         public NotesPage()
         {
             InitializeComponent();
+            plane[] planes =
+            {
+                new plane("ldjfa", "adfawef"),
+            };
 
-            
-           
+            picker1.ItemsSource = planes;
+
         }
 
         void OnButtonClicked_T(object sender, EventArgs e)
@@ -26,4 +30,27 @@ namespace Notes.Views
                      
         }
     }
+
+    public class plane
+    {
+        string weight;
+        string slots;
+        public plane(string w, string s)
+        {
+            weight = w;
+            slots = s;
+        }
+
+        public string calculate(int num)
+        {
+            return weight + num;
+        }
+
+        public override string ToString()
+        {
+            return weight;
+        }
+    }
+       
 }
+

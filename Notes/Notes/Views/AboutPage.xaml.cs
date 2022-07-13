@@ -9,6 +9,8 @@ namespace Notes.Views
         public AboutPage()
         {
             InitializeComponent();
+            aircraftWeight.Text = "10";
+
         }
 
         async void OnButtonClicked(object sender, EventArgs e)
@@ -18,3 +20,4 @@ namespace Notes.Views
         }      
     }
 }
+
