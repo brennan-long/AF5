@@ -34,7 +34,9 @@
             <Label Text="                                                                                                                                          "
                FontSize="30"
                TextDecorations="Underline"
-                   BackgroundColor="DarkGray"/>
+                   BackgroundColor="DarkGray"
+                   TextColor="Green"
+                   x:Name="balanceResults"/>
 
             <Label Text ="Takeoff Recomendations"
                TextDecorations="None"
@@ -45,7 +47,8 @@
             <Label Text="                                                                                                                                          "
                FontSize="30"
                TextDecorations="Underline"
-                   BackgroundColor="DarkGray"/>
+                   BackgroundColor="DarkGray"
+                   x:Name="takeoffRecomendations"/>
         </StackLayout>
 
         <!-- Layout children vertically -->
