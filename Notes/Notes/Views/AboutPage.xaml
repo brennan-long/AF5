@@ -50,6 +50,7 @@
                    BackgroundColor="DarkGray"
                    x:Name="takeoffRecomendations"
                    TextColor="Green"/>
+
         </StackLayout>
 
         <!-- Layout children vertically -->

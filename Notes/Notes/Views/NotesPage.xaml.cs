@@ -13,6 +13,7 @@ namespace Notes.Views
             InitializeComponent();
             plane[] planes =
             {
+
                 new plane("Select","Num2","hmm","bruh"),
             };
 
@@ -33,6 +34,7 @@ namespace Notes.Views
 
     public class plane
     {
+
         string name;
         string baseweight;
         string maxweight;
@@ -62,6 +64,7 @@ namespace Notes.Views
         public override  string ToString()
         {
             return maxweight;
+
         }
     }
        
