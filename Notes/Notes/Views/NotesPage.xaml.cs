@@ -11,7 +11,20 @@ namespace Notes.Views
         public NotesPage()
         {
             InitializeComponent();
-            plane[] planes =
+            string[] planeName = new string[] { "C-5", "C-17", "C-130", "F-15", "Boeing 747" };
+            int[] planebw = new int[] {400000,282000,75840,45000,404600 };
+            int[] planemw = new int[] {685000, 453300, 119840, 68000, 404600 };
+            int[] planeS = new int[] {5,4,3,2,5 };
+            int[] planetd = new int [] { 8300, 8200,3586 ,1000 ,10450  };
+            int[] planeld = new int[] { 4900,3500 ,2500 ,1650 ,6920  };
+
+            planeInfo[] list = new planeInfo[planeName.Length];
+            for (int i = 0; i < planeName.Length; i++)
+            {
+                list[i] = new planeInfo(planeName[i]);
+                picker1.ItemsSource = planeName[];
+            }
+           /* plane[] planes =
             {
 
 
@@ -23,7 +36,7 @@ namespace Notes.Views
 
             };
 
-            picker1.ItemsSource = planes;
+            picker1.ItemsSource = planes;*/
 
         }
 
@@ -38,31 +51,82 @@ namespace Notes.Views
         }
     }
 
-    public class plane
+    public class planeInfo
     {
 
         string name;
-        string baseweight;
-        string maxweight;
-        string slots;
-        string takeoffdistance;
-        string landingdistance;
-        
-        public plane(string n, string bw, string mw, string s, string td, string ld)
-        {
-            name = n;
-            baseweight = bw;
-            maxweight = mw;
-            slots = s;
-            takeoffdistance = td;
-            landingdistance = ld;
-        }
+        int baseweight;
+        int maxweight;
+        int slots;
+        int takeoffdistance;
+        int landingdistance;
 
-        public string Name()
+        public planeInfo(string n, int bw, int mw, int S, int td, int ld)
+        {
+            this.name = n;
+            this.baseweight = bw;
+            this.maxweight = mw;
+            this.slots = S;
+            this.takeoffdistance = td;
+            this.landingdistance = ld;           
+        }
+        public planeInfo(string n)
+        {
+            this.name=n;
+        }
+        public int Getbw()
+        {
+            return baseweight;
+        }
+        public void Setbw(int bw)
+        {
+            baseweight = bw;
+        }
+        public int Getmw()
         {
             return maxweight;
         }
-        public string calculate(int num)
+        public void Setmw(int mw)
+        {
+            maxweight = mw;
+        }
+        public int GetS()
+        {
+            return slots;
+        }
+        public void SetS(int S)
+        {
+            slots = S;
+        }
+        public int Gettd()
+        {
+            return takeoffdistance;
+        }
+        public void Settd(int td)
+        {
+            takeoffdistance = td;
+        }
+        public int Getld()
+        {
+            return landingdistance;
+        }
+        public void Setld(int ld)
+        {
+            landingdistance = ld;
+        }
+
+
+
+
+
+
+
+
+        public int Name()
+        {
+            return maxweight;
+        }
+        public int calculate(int num)
         {
             return baseweight + num;
         }
@@ -72,15 +136,15 @@ namespace Notes.Views
             return name;
 
         }
-        public string Slots()
+        public int Slots()
         {
             return slots;
         }
-        public string Takeoff()
+        public int Takeoff()
         {
             return takeoffdistance;
         }
-        public string Landing()
+        public int Landing()
         {
             return landingdistance;
         }
