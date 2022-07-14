@@ -26,7 +26,7 @@ namespace Notes.Views
 
    } 
 
-        } 
+         
 
 
 
@@ -43,8 +43,12 @@ namespace Notes.Views
             }
         }
     }
-}
+
+
     
   
+
+
+
 
 

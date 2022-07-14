@@ -35,7 +35,8 @@
             <Picker Title=" Select"
                     TitleColor="White"
                     TextColor="White"
-                    x:Name="picker1">
+                    x:Name="picker1"
+                    SelectedIndexChanged="picker1_SelectedIndexChanged">
             </Picker>
           
             <Grid HeightRequest="60"
@@ -54,6 +55,7 @@
                 BackgroundColor="DarkBlue"
                 WidthRequest="700"
                 HeightRequest="275"/>
+            <Label Text="Please Select a Plane" x:Name="planeLabel"/>
         </StackLayout>
        </StackLayout>
  </ContentPage>
