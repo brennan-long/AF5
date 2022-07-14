@@ -14,8 +14,13 @@ namespace Notes.Views
             plane[] planes =
             {
 
-                new plane("C5","400,000","hm12","bruh", "wow", "wind"),
-                new plane("F-15", "1500", "2 Slots", "other things", "yea", "this sucks")
+
+                new plane("C-5","400,000","685,000","5", "8300", "4900"),
+                new plane("C-17", "282,400", "453,300", "4", "8200", "3500"),
+                new plane("C-130", "75,840", "119,840", "3", "3586", "2500"),
+                new plane("F-15", "45,000", "68,000", "2", "1000", "1650"),
+                new plane("Boeing 747", "404,600", "653,200", "5", "10450", "6920")
+
             };
 
             picker1.ItemsSource = planes;

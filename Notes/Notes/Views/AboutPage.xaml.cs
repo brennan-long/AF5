@@ -9,9 +9,9 @@ namespace Notes.Views
         public AboutPage()
         {
             InitializeComponent();
-            aircraftWeight.Text = "400,000";
-            balanceResults.Text = "Aircraft is balanced";
-            takeoffRecomendations.Text = "Takeoff Allowed";
+            aircraftWeight.Text = "this sucks";
+            balanceResults.Text = "this really sucks";
+            takeoffRecomendations.Text = "like really really sucks";
 
         }
 
