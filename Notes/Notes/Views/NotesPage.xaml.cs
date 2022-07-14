@@ -38,17 +38,23 @@ namespace Notes.Views
         private void picker1_SelectedIndexChanged(object sender, EventArgs e)
         {
             planeLabel.Text = (picker1.SelectedItem as planeInfo).name.ToString();
+            Info.currentPlane = (picker1.SelectedItem as planeInfo);
         }
+    }
+
+    static class Info
+    {
+        static public planeInfo currentPlane = null;
     }
 
     public class planeInfo
         {
             public string name;
-            int baseweight;
-            int maxweight;
-            int slots;
-            int takeoffdistance;
-            int landingdistance;
+            public int baseweight;
+            public int maxweight;
+            public int slots;
+            public int takeoffdistance;
+            public int landingdistance;
 
             public planeInfo(string n, int bw, int mw, int S, int td, int ld)
             {
@@ -103,13 +109,6 @@ namespace Notes.Views
             {
                 landingdistance = ld;
             }
-
-
-
-
-
-
-
 
         public int Name()
         {

@@ -64,7 +64,8 @@
                    FontSize="17"/>
             <Picker Title="Select"
                 TitleColor="White"
-                TextColor="Black">
+                TextColor="Black"
+                    x:Name="Picker2">
                 
                 
 
