@@ -21,9 +21,13 @@ namespace Notes.Views
         public Location()
         {
             InitializeComponent();
+
         }
 
    } 
+
+        } 
+
 
 
         
@@ -41,6 +45,6 @@ namespace Notes.Views
     }
 }
     
-    
+  
 
 
