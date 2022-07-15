@@ -9,30 +9,30 @@
     <Grid RowDefinitions="Auto,*">
         <StackLayout Grid.Row="1"
                      Margin="20"
-                     Spacing="20"
+                     Spacing="10"
                      
                      >
         <Label Text ="Current Aircraft Weight"
                TextDecorations="None"
-               FontSize="16"
+               FontSize="13"
                FontAttributes="Bold"
                Margin="0"
                TextColor="White"
                />
-        <Label Text="                                                                                                                                          "
-               FontSize="30"
+        <Label Text=""
+               FontSize="20"
                TextDecorations="Underline"
                BackgroundColor="DarkGray"
                x:Name="aircraftWeight"/>
 
             <Label Text ="Balance Results"
                TextDecorations="None"
-               FontSize="16"
+               FontSize="13"
                    FontAttributes="Bold"
                    TextColor="White"
                />
             <Label Text="                                                                                                                                          "
-               FontSize="30"
+               FontSize="20"
                TextDecorations="Underline"
                    BackgroundColor="DarkGray"
                    TextColor="Green"
@@ -40,81 +40,73 @@
 
             <Label Text ="Takeoff Recomendations"
                TextDecorations="None"
-               FontSize="16"
+               FontSize="13"
                   FontAttributes="Bold"
                    TextColor="White"
                />
             <Label Text="                                                                                                                                          "
-               FontSize="30"
+               FontSize="20"
                TextDecorations="Underline"
                    BackgroundColor="DarkGray"
                    x:Name="takeoffRecomendations"
                    TextColor="Green"/>
 
-        </StackLayout>
+        <!--/StackLayout-->
 
         <!-- Layout children vertically -->
 
-        <StackLayout Grid.Row="2"
-                     Margin="20"
-                     Spacing="20">
+        <!--StackLayout Grid.Row="2"
+                     Margin="10"
+                     Spacing="20"-->
             <Label Text="Loading Slot 1"
                    TextColor="White"
                    TextDecorations="Underline"
+      
                    FontSize="17"/>
             <Picker Title="Select"
                 TitleColor="White"
-                TextColor="Black"
-                    x:Name="Picker2">
-                
-                
-
-                                <Picker.Items>
-                                    <x:String>Select</x:String>
-                                    <x:String>Humvee</x:String>
-                                    <x:String>M1 Tank</x:String>
-                                    <x:String>UH-60 Blackhawk</x:String>
-                                    <x:String>Styker ICV</x:String>
-                                    <x:String>CV90</x:String>
-                                </Picker.Items>
-                            </Picker>
-
+                TextColor="White"
+                SelectedIndexChanged="picker_SelectedIndexChanged"
+                x:Name="picker1"/>
             <Label Text="Loading Slot 2"
                    TextColor="White"
                    TextDecorations="Underline"
                    FontSize="17"/>
             <Picker Title="Select"
                 TitleColor="White"
-                TextColor="Black">
-
-                <Picker.Items>
-                    <x:String>Select</x:String>
-                    <x:String>Humvee</x:String>
-                    <x:String>M1 Tank</x:String>
-                    <x:String>UH-60 Blackhawk</x:String>
-                    <x:String>Styker ICV</x:String>
-                    <x:String>CV90</x:String>
-                </Picker.Items>
-            </Picker>
-
+                TextColor="White"
+                SelectedIndexChanged="picker_SelectedIndexChanged"
+                x:Name="picker2"/>
+            
             <Label Text="Loading Slot 3"
                    TextColor="White"
                    TextDecorations="Underline"
                    FontSize="17"/>
             <Picker Title="Select"
                 TitleColor="White"
-                TextColor="Black">
+                TextColor="White"
+                SelectedIndexChanged="picker_SelectedIndexChanged"
+                x:Name="picker3"/>
 
-                <Picker.Items>
-                    <x:String>Select</x:String>
-                    <x:String>Humvee</x:String>
-                    <x:String>M1 Tank</x:String>
-                    <x:String>UH-60 Blackhawk</x:String>
-                    <x:String>Styker ICV</x:String>
-                    <x:String>CV90</x:String>
-                </Picker.Items>
-            </Picker>
-      
+            <Label Text="Loading Slot 4"
+                   TextColor="White"
+                   TextDecorations="Underline"
+                   FontSize="17"/>
+            <Picker Title="Select"
+                TitleColor="White"
+                TextColor="White"
+                SelectedIndexChanged="picker_SelectedIndexChanged"
+                x:Name="picker4"/>
+
+            <Label Text="Loading Slot 5"
+                   TextColor="White"
+                   TextDecorations="Underline"
+                   FontSize="17"/>
+            <Picker Title="Select"
+                TitleColor="White"
+                TextColor="White"
+                SelectedIndexChanged="picker_SelectedIndexChanged"
+                x:Name="picker5"/>
 
         </StackLayout>
     </Grid>
