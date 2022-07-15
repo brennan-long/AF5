@@ -21,22 +21,29 @@ namespace Notes.Views
         public Location()
         {
             InitializeComponent();
-        } 
 
-        public class airportInfo
-        {
-            public string name;
-            public string runwayinfo;
-        public airportInfo (string AIname, string AIrunway)
-            {
-                this.name = AIname;
-                this.runwayinfo = AIrunway;
-            }
+
         }
-        public class runwayInfo
+
+    }
+
+
+
+
+    public class airportInfo
+    {
+        public string name;
+        public string runwayinfo;
+        public airportInfo(string AIname, string AIrunway)
         {
-            public string 
+            this.name = AIname;
+            this.runwayinfo = AIrunway;
         }
+    }
+    public class runwayInfo
+    {
+        public string dee;
+    }
         
         
          public static class lol
