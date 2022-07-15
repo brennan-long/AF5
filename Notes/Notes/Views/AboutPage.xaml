@@ -21,7 +21,11 @@
                />
         <Label Text=""
                FontSize="20"
+
                
+
+               TextDecorations="Underline"
+
                BackgroundColor="DarkGray"
                x:Name="aircraftWeight"/>
 
