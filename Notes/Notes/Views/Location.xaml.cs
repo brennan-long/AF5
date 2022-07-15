@@ -23,7 +23,15 @@ namespace Notes.Views
             InitializeComponent();
         } 
 
-
+        public class airportInfo
+        {
+            public string name;
+            public string runwayinfo;
+        }
+        public class runwayInfo
+        {
+            public string 
+        }
         
         
          public static class lol
