@@ -16,9 +16,10 @@ namespace Notes.Views
             if (Info.currentPlane != null)
             {
                 aircraftWeight.Text = Info.currentPlane.baseweight.ToString();
+                balanceResults.Text = "plane is unbalanced!";
             }
 
-            balanceResults.Text = "this really sucks";
+            
             takeoffRecomendations.Text = "like really really sucks";
 
             slots = new slotsInfo[]
