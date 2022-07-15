@@ -9,15 +9,8 @@
                     TitleColor="White"
                     TextColor="White"
                 VerticalOptions="Start"
-                FontSize="22">
-            <Picker.Items>            
-                <x:String>Select</x:String>
-                <x:String>Robins Air Force Base</x:String>
-                <x:String>Hill Air Force Base</x:String>
-                <x:String>Tinker Air Force Base</x:String>
-                <x:String>Shaw Air Force Base</x:String>
-                <x:String>Hartsfield-Jackson Atlanta International Airport</x:String>            
-            </Picker.Items>
+                FontSize="22"
+               x:Name=" picker3">                
         </Picker>
 
         
