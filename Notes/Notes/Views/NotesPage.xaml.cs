@@ -11,18 +11,16 @@ namespace Notes.Views
         public NotesPage()
         {
             InitializeComponent();
-            plane[] planes =
+            planeInfo[] planes =
             {
-
-
-                new plane("C-5","400,000","685,000","5", "8300", "4900"),
-                new plane("C-17", "282,400", "453,300", "4", "8200", "3500"),
-                new plane("C-130", "75,840", "119,840", "3", "3586", "2500"),
-                new plane("F-15", "45,000", "68,000", "2", "1000", "1650"),
-                new plane("Boeing 747", "404,600", "653,200", "5", "10450", "6920")
+                new planeInfo("C-5",400000,685000,5, 8300, 4900),
+                new planeInfo("C-17", 282400, 453300, 4, 8200, 3500),
+                new planeInfo("C-130", 75840, 119840, 3, 3586, 2500),
+                new planeInfo("F-15", 45000, 68000, 2, 1000, 1650),
+                new planeInfo("Boeing 747", 404600, 653200, 5, 10450, 6920)
 
             };
-
+            picker1.SelectedItem = "";
             picker1.ItemsSource = planes;
 
         }
@@ -36,33 +34,87 @@ namespace Notes.Views
         {         
                      
         }
+
+        private void picker1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            planeLabel.Text = (picker1.SelectedItem as planeInfo).name.ToString();
+            Info.currentPlane = (picker1.SelectedItem as planeInfo);
+        }
     }
 
-    public class plane
+    static class Info
     {
+        static public planeInfo currentPlane = null;
+    }
 
-        string name;
-        string baseweight;
-        string maxweight;
-        string slots;
-        string takeoffdistance;
-        string landingdistance;
-        
-        public plane(string n, string bw, string mw, string s, string td, string ld)
+    public class planeInfo
         {
-            name = n;
-            baseweight = bw;
-            maxweight = mw;
-            slots = s;
-            takeoffdistance = td;
-            landingdistance = ld;
-        }
+            public string name;
+            public int baseweight;
+            public int maxweight;
+            public int slots;
+            public int takeoffdistance;
+            public int landingdistance;
 
-        public string Name()
+            public planeInfo(string n, int bw, int mw, int S, int td, int ld)
+            {
+                this.name = n;
+                this.baseweight = bw;
+                this.maxweight = mw;
+                this.slots = S;
+                this.takeoffdistance = td;
+                this.landingdistance = ld;           
+            }
+            public planeInfo(string n)
+            {
+                this.name=n;
+            }
+            public int Getbw()
+            {
+                return baseweight;
+            }
+            public void Setbw(int bw)
+            {
+                baseweight = bw;
+            }
+            public int Getmw()
+            {
+                return maxweight;
+            }
+            public void Setmw(int mw)
+            {
+                maxweight = mw;
+            }
+            public int GetS()
+            {
+                return slots;
+            }
+            public void SetS(int S)
+            {
+                slots = S;
+            }
+            public int Gettd()
+            {
+                return takeoffdistance;
+            }
+            public void Settd(int td)
+            {
+                takeoffdistance = td;
+            }
+            public int Getld()
+            {
+                return landingdistance;
+            }
+            public void Setld(int ld)
+            {
+                landingdistance = ld;
+            }
+
+        public int Name()
         {
             return maxweight;
         }
-        public string calculate(int num)
+        public int calculate(int num)
         {
             return baseweight + num;
         }
@@ -72,15 +124,15 @@ namespace Notes.Views
             return name;
 
         }
-        public string Slots()
+        public int Slots()
         {
             return slots;
         }
-        public string Takeoff()
+        public int Takeoff()
         {
             return takeoffdistance;
         }
-        public string Landing()
+        public int Landing()
         {
             return landingdistance;
         }
