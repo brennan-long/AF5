@@ -5,6 +5,9 @@
              Title="Calculations"
              BackgroundColor="DimGray"
              >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Refresh" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
     <!-- Layout children in two rows -->
     <Grid RowDefinitions="Auto,*">
         <StackLayout Grid.Row="1"
@@ -21,11 +24,7 @@
                />
         <Label Text=""
                FontSize="20"
-
                
-
-               TextDecorations="Underline"
-
                BackgroundColor="DarkGray"
                x:Name="aircraftWeight"/>
 
@@ -39,8 +38,8 @@
                FontSize="20"
                TextDecorations="Underline"
                    BackgroundColor="DarkGray"
-                   TextColor="Green"
                    x:Name="balanceResults"/>
+
 
             <Label Text ="Takeoff Recomendations"
                TextDecorations="None"
@@ -52,8 +51,7 @@
                FontSize="20"
                TextDecorations="Underline"
                    BackgroundColor="DarkGray"
-                   x:Name="takeoffRecomendations"
-                   TextColor="Green"/>
+                   x:Name="takeoffRecomendations"/>
 
         <!--/StackLayout-->
 
