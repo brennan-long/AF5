@@ -13,6 +13,7 @@ namespace Notes.Views
             InitializeComponent();
             planeInfo[] planes =
             {
+                new planeInfo("Select",000,5, 8300, 4900,0),
                 new planeInfo("C-5",400000,685000,5, 8300, 4900),
                 new planeInfo("C-17", 282400, 453300, 4, 8200, 3500),
                 new planeInfo("C-130", 75840, 119840, 3, 3586, 2500),
