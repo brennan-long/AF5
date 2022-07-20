@@ -37,9 +37,25 @@
                      Margin="10"
                      Spacing="15"
                      BackgroundColor="White">
-            <Label FontSize="22">             
+            <Label Text="Location:" 
+                FontSize="19">             
             </Label>
-       </StackLayout>
+            <Label Text="Temperature:" 
+                FontSize="19">
+            </Label>
+            <Label Text="Wind Speed:" 
+                FontSize="19">
+            </Label>
+            <Label Text="Runway Name:" 
+                FontSize="19">
+            </Label>
+            <Label Text="Runway Dimensions:" 
+                FontSize="19">
+            </Label>
+            <Label Text="Runway Elevation:" 
+                FontSize="19">
+            </Label>
+        </StackLayout>
     </Grid>
 </ContentPage>
 

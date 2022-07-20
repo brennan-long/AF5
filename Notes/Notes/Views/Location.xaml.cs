@@ -22,7 +22,12 @@ namespace Notes.Views
         {
             InitializeComponent();
 
-
+            airportInfo[] airports =
+            {
+                new airportInfo("Robins Air Force Base", "Runway 1")
+            };
+            picker3.SelectedItem = "";
+            picker3.ItemsSource=airports;
         }
 
     }
@@ -39,13 +44,21 @@ namespace Notes.Views
             this.name = AIname;
             this.runwayinfo = AIrunway;
         }
+
+        public airportInfo(string AIname)
+        {
+            this.name = AIname;
+        }
+        public string Getrunwayinfo()
+        {
+            return runwayinfo;
+        }
+        public void Setrunwayinfo(string AIrunway)
+        {
+            runwayinfo= AIrunway;
+        }
+
     }
-    public class runwayInfo
-    {
-        public string dee;
-    }
-        
-        
          public static class lol
         {
             public static void run()
