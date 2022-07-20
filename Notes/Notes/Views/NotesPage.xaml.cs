@@ -38,7 +38,7 @@ namespace Notes.Views
 
         private void picker1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            planeLabel.Text = (picker1.SelectedItem as planeInfo).name.ToString();
+           
             Info.currentPlane = (picker1.SelectedItem as planeInfo);
         }
     }
