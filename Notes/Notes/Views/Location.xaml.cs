@@ -12,28 +12,37 @@ using HtmlAgilityPack;
 namespace Notes.Views
 {
 
-
-
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Location : ContentPage
     {
-
         public Location()
         {
             InitializeComponent();
 
-            airportInfo[] airports =
+           airportInfo[] airports =
             {
-                new airportInfo("Robins Air Force Base", "Runway 1")
+                new airportInfo("Robins Air Force Base", "Runway 1"),
+                new airportInfo ("Hill Air Force Base", "Runway 2"),
+                new airportInfo("Tinker Air Force Base", "Runway 3"),
+                new airportInfo ("Shaw Air Force Base", "Runway 4"),
+                new airportInfo ("Hartsfield-Jackson International Airport", "Runway 4"),
             };
-            picker3.SelectedItem = "";
-            picker3.ItemsSource=airports;
+            locationPicker.SelectedItem = airports[0];
+            locationPicker.ItemsSource = airports;
         }
-
+        private void locationPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //if (picker3.SelectedItem != null)
+            //{
+            //    InfoAP.currentAirport = (picker3.SelectedItem as airportInfo);
+            //}
+        }
     }
 
-
-
+    static class InfoAP
+    {
+        static public airportInfo currentAirport = null;
+    }
 
     public class airportInfo
     {
@@ -49,6 +58,10 @@ namespace Notes.Views
         {
             this.name = AIname;
         }
+        public override string ToString()
+        {
+            return name;
+        }
         public string Getrunwayinfo()
         {
             return runwayinfo;
@@ -59,7 +72,7 @@ namespace Notes.Views
         }
 
     }
-         public static class lol
+        /* public static class lol
         {
             public static void run()
             {
@@ -68,7 +81,7 @@ namespace Notes.Views
                 var hilldim1 = doc.DocumentNode.SelectNodes("/html/body/table[5]/tr/td[1]/table[6]/tr[1]/td[2]")[0].InnerText;
 
             }
-        }
+        }*/
     }
 
 
