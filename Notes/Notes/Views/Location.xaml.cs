@@ -19,6 +19,7 @@ namespace Notes.Views
         {
             InitializeComponent();
 
+
            airportInfo[] airports =
             {
                 new airportInfo("Robins Air Force Base", "Runway 1"),
@@ -36,6 +37,7 @@ namespace Notes.Views
             //{
             //    InfoAP.currentAirport = (picker3.SelectedItem as airportInfo);
             //}
+
         }
     }
 
@@ -58,10 +60,13 @@ namespace Notes.Views
         {
             this.name = AIname;
         }
+
         public override string ToString()
         {
             return name;
         }
+
+
         public string Getrunwayinfo()
         {
             return runwayinfo;
@@ -72,7 +77,9 @@ namespace Notes.Views
         }
 
     }
+
         /* public static class lol
+
         {
             public static void run()
             {

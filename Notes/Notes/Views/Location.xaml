@@ -34,6 +34,8 @@
                      BackgroundColor="White">
             <Label Text="Location:" 
                 FontSize="19">             
+
+
             </Label>
             <Label Text="Temperature:" 
                 FontSize="19">
@@ -50,6 +52,7 @@
             <Label Text="Runway Elevation:" 
                 FontSize="19">
             </Label>
+
         </StackLayout>
     </Grid>
 </ContentPage>
