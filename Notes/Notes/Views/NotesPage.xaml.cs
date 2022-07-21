@@ -11,8 +11,11 @@ namespace Notes.Views
         public NotesPage()
         {
             InitializeComponent();
-            planeInfo[] planes =
+
+            
+            planeInfo[] planes = new planeInfo[]
             {
+
                 new planeInfo("Select",0,685000,5, 8300, 4900),
                 new planeInfo("C-5",400000,685000,5, 8300, 4900),
                 new planeInfo("C-17", 282400, 453300, 4, 8200, 3500),
