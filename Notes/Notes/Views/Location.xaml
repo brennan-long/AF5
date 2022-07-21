@@ -5,22 +5,19 @@
              Title="Location"       >
     <Grid RowDefinitions="100"
            BackgroundColor="Red">
-       <Picker Title=" Select A Location"
-                    TitleColor="White"
-                    TextColor="White"
+        <Picker Title=" Select A Location"
+                TitleColor="White"
+                TextColor="White"
                 VerticalOptions="Start"
                 FontSize="22"
-               x:Name=" picker3">                
-        </Picker>
-
-        
+               x:Name=" locationPicker"
+               SelectedIndexChanged="locationPicker_SelectedIndexChanged"/>
 
         <Picker Title=" Select A Runway"
-                    TitleColor="White"
-                    TextColor="White"
+                TitleColor="White"
+                TextColor="White"
                 VerticalOptions="End"
-                FontSize="22"
-                     >
+                FontSize="22">
             <Picker.Items>
                 <x:String>Select</x:String>
                 <x:String>C-5</x:String>
@@ -31,14 +28,14 @@
             </Picker.Items>
         </Picker>
 
-
-
         <StackLayout Grid.Row="1"
                      Margin="10"
                      Spacing="15"
                      BackgroundColor="White">
             <Label Text="Location:" 
                 FontSize="19">             
+
+
             </Label>
             <Label Text="Temperature:" 
                 FontSize="19">
@@ -55,6 +52,7 @@
             <Label Text="Runway Elevation:" 
                 FontSize="19">
             </Label>
+
         </StackLayout>
     </Grid>
 </ContentPage>
