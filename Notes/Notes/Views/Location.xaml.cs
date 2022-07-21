@@ -24,15 +24,16 @@ namespace Notes.Views
 
            airportInfo[] airports = new airportInfo[]   
             {
-                new airportInfo("Robins Air Force Base", "Runway 1"),
-                new airportInfo ("Hill Air Force Base", "Runway 2"),
-                new airportInfo("Tinker Air Force Base", "Runway 3"),
-                new airportInfo ("Shaw Air Force Base", "Runway 4"),
-                new airportInfo ("Hartsfield-Jackson International Airport", "Runway 4"),
+                new airportInfo("Robins Air Force Base"),
+                new airportInfo ("Hill Air Force Base"),
+                new airportInfo("Tinker Air Force Base"),
+                new airportInfo ("Shaw Air Force Base"),
+                new airportInfo ("Hartsfield-Jackson International Airport"),
             };
-            locationPicker.SelectedItem = airports[0];
-            //locationPicker.ItemsSource = airports;
+            locationPicker.SelectedItem = "";
+            locationPicker.ItemsSource = airports;            
         }
+        
         private void locationPicker_changed(object sender, EventArgs e)
         {
             Console.WriteLine("something");
@@ -46,36 +47,16 @@ namespace Notes.Views
 
     public class airportInfo
     {
-        public string name;
-        public string runwayinfo;
-        public airportInfo(string AIname, string AIrunway)
-        {
-            this.name = AIname;
-            this.runwayinfo = AIrunway;
-        }
-
+        public string name;      
         public airportInfo(string AIname)
         {
             this.name = AIname;
-            this.runwayinfo = "";
         }
-
         public override string ToString()
         {
             return name;
-        }
-
-
-        public string Getrunwayinfo()
-        {
-            return runwayinfo;
-        }
-        public void Setrunwayinfo(string AIrunway)
-        {
-            runwayinfo= AIrunway;
-        }
-
-    }
+        }     
+      }
 
         /* public static class lol
 
