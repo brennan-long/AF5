@@ -19,8 +19,10 @@ namespace Notes.Views
         {
             InitializeComponent();
 
+            locationPicker.ItemsSource = new String[] { };
+            
 
-           airportInfo[] airports =
+           airportInfo[] airports = new airportInfo[]   
             {
                 new airportInfo("Robins Air Force Base", "Runway 1"),
                 new airportInfo ("Hill Air Force Base", "Runway 2"),
@@ -29,15 +31,11 @@ namespace Notes.Views
                 new airportInfo ("Hartsfield-Jackson International Airport", "Runway 4"),
             };
             locationPicker.SelectedItem = airports[0];
-            locationPicker.ItemsSource = airports;
+            //locationPicker.ItemsSource = airports;
         }
-        private void locationPicker_SelectedIndexChanged(object sender, EventArgs e)
+        private void locationPicker_changed(object sender, EventArgs e)
         {
-            //if (picker3.SelectedItem != null)
-            //{
-            //    InfoAP.currentAirport = (picker3.SelectedItem as airportInfo);
-            //}
-
+            Console.WriteLine("something");
         }
     }
 
@@ -59,6 +57,7 @@ namespace Notes.Views
         public airportInfo(string AIname)
         {
             this.name = AIname;
+            this.runwayinfo = "";
         }
 
         public override string ToString()

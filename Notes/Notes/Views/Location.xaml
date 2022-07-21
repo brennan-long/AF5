@@ -5,13 +5,14 @@
              Title="Location"       >
     <Grid RowDefinitions="100"
            BackgroundColor="Red">
+
         <Picker Title=" Select A Location"
                 TitleColor="White"
                 TextColor="White"
                 VerticalOptions="Start"
                 FontSize="22"
-               x:Name=" locationPicker"
-               SelectedIndexChanged="locationPicker_SelectedIndexChanged"/>
+               x:Name="locationPicker"
+               PropertyChanged="locationPicker_changed"/>
 
         <Picker Title=" Select A Runway"
                 TitleColor="White"
@@ -33,7 +34,7 @@
                      Spacing="15"
                      BackgroundColor="White">
             <Label Text="Location:" 
-                FontSize="19">             
+                FontSize="19">
 
 
             </Label>
