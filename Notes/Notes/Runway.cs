@@ -8,6 +8,9 @@ namespace Notes
 
     internal class Runway
     {
-        string name;
+        public string Name { get; set; }
+        public int[] Dimensions { get; set; }
+        public int Elevation { get; set; }
+        public string Aircraft { get; set; }
     }
 }

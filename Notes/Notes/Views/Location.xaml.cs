@@ -48,23 +48,46 @@ namespace Notes.Views
     {
         public string name;
         public string runwayinfo;
+       
+        
         public airportInfo(string AIname, string AIrunway, string AirportID)
         {
+            string url = "https://www.airnav.com/airport/" + AirportID;
+            HtmlWeb web = new HtmlWeb();
+            HtmlDocument doc = web.Load(url);
             this.name = AIname;
             this.runwayinfo = AIrunway;
             string XRoot = "/html/body/table[5]/tr/td[1]";
-            string url = "https://www.airnav.com/airport/" + AirportID;
             bool runway = true;
             int i = 1;
+            int j = 7;
+            List<Runway> rList = new List<Runway>();
             while (runway)
             {
                 string xpath = XRoot + "h4[" + i.ToString() + "]";
-                if (WebScrape(xpath, url) != null)
+                if (WebScrape(xpath, doc) != null)
                 {
+                    Runway newRunway1 = new Runway();
+                    Runway newRunway2 = new Runway();
 
+                    newRunway1.Name = WebScrape(XRoot + "table[" + j.ToString() + "]/tr[5]/td[2]", doc).InnerText;
+                    newRunway2.Name = WebScrape(XRoot + "table[" + j.ToString() + "]/tr[5]/td[4]", doc).InnerText;
+
+                    string Dim = WebScrape(XRoot + "table[" + j.ToString() + "]/tr[1]/td[2]", doc).InnerText;
+                    string[] dim = Dim.Replace(" ", "").Split('/')[0].Replace("ft.", "").Split('x');
+                    newRunway1.Dimensions = new int[] { Int32.Parse(dim[0]), Int32.Parse(dim[1])};
+                    newRunway2.Dimensions = new int[] { Int32.Parse(dim[0]), Int32.Parse(dim[1]) };
+
+                    string elevation1 = WebScrape(XRoot + "table[" + j.ToString() + "]/tr[8]/td[2]", doc).InnerText.Replace(" ft.", "");
+                    string elevation2 = WebScrape(XRoot + "table[" + j.ToString() + "]/tr[8]/td[4]", doc).InnerText.Replace(" ft.", "");
+                    newRunway1.Elevation = Int32.Parse(elevation1);
+                    newRunway2.Elevation = Int32.Parse(elevation2);
+
+                    rList.Add(newRunway1);
+                    rList.Add(newRunway2);
                 }
             }
-            string info = WebScrape(, url);
+            string info = WebScrape( , url);
         }
 
         public airportInfo(string AIname)
@@ -87,12 +110,9 @@ namespace Notes.Views
         {
             runwayinfo = AIrunway;
         }
-        public HtmlNode WebScrape(string xpath, string url)
+        public HtmlNode WebScrape(string xpath, HtmlDocument doc)
         {
-            HtmlWeb web = new HtmlWeb();
-            HtmlDocument doc = web.Load(url);
             return doc.DocumentNode.SelectNodes(xpath)[0];
-
         }
 
 
