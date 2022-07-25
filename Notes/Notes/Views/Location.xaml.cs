@@ -22,6 +22,7 @@ namespace Notes.Views
             locationPicker.ItemsSource = new String[] { };
             
 
+
            airportInfo[] airports = new airportInfo[]   
             {
                 new airportInfo("Robins Air Force Base", "Runway 1", ""),
@@ -33,6 +34,7 @@ namespace Notes.Views
             locationPicker.SelectedItem = airports[0];
             //locationPicker.ItemsSource = airports;
         }
+
         private void locationPicker_changed(object sender, EventArgs e)
         {
             Console.WriteLine("something");
@@ -46,6 +48,7 @@ namespace Notes.Views
 
     public class airportInfo
     {
+
         public string name;
         public string runwayinfo;
        
@@ -90,15 +93,16 @@ namespace Notes.Views
             string info = WebScrape( , url);
         }
 
+
         public airportInfo(string AIname)
         {
             this.name = AIname;
             this.runwayinfo = "";
         }
-
         public override string ToString()
         {
             return name;
+
         }
 
 
@@ -114,7 +118,6 @@ namespace Notes.Views
         {
             return doc.DocumentNode.SelectNodes(xpath)[0];
         }
-
 
 
     }
