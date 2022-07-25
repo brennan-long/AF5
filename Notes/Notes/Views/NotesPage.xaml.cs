@@ -31,7 +31,7 @@ namespace Notes.Views
 
         void OnButtonClicked_T(object sender, EventArgs e)
         {
-          
+           
         }
 
         void OnButtonClicked_L(object sender, EventArgs e)
