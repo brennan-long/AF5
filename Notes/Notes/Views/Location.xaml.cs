@@ -75,19 +75,18 @@ namespace Notes.Views
 
            /* locationPicker.ItemsSource = new String[] { };
             
-
            airportInfo[] airports = new airportInfo[]   
             {
-                new airportInfo("Robins Air Force Base"),
-                new airportInfo ("Hill Air Force Base"),
-                new airportInfo("Tinker Air Force Base"),
-                new airportInfo ("Shaw Air Force Base"),
-                new airportInfo ("Hartsfield-Jackson International Airport"),
+                new airportInfo("Robins Air Force Base", "Runway 1", ""),
+                new airportInfo ("Hill Air Force Base", "Runway 2", ""),
+                new airportInfo("Tinker Air Force Base", "Runway 3", ""),
+                new airportInfo ("Shaw Air Force Base", "Runway 4", ""),
+                new airportInfo ("Hartsfield-Jackson International Airport", "Runway 4", ""),
             };
-            locationPicker.SelectedItem = "";
-            locationPicker.ItemsSource = airports;            
+            locationPicker.SelectedItem = airports[0];
+            //locationPicker.ItemsSource = airports;
         }
-        
+
         private void locationPicker_changed(object sender, EventArgs e)
         {
             Console.WriteLine("something");
@@ -101,17 +100,80 @@ namespace Notes.Views
 
     public class airportInfo
     {
-        public string name;      
+
+        public string name;
+        public string runwayinfo;
+       
+        
+        public airportInfo(string AIname, string AIrunway, string AirportID)
+        {
+            string url = "https://www.airnav.com/airport/" + AirportID;
+            HtmlWeb web = new HtmlWeb();
+            HtmlDocument doc = web.Load(url);
+            this.name = AIname;
+            this.runwayinfo = AIrunway;
+            string XRoot = "/html/body/table[5]/tr/td[1]";
+            bool runway = true;
+            int i = 1;
+            int j = 7;
+            List<Runway> rList = new List<Runway>();
+            while (runway)
+            {
+                string xpath = XRoot + "h4[" + i.ToString() + "]";
+                if (WebScrape(xpath, doc) != null)
+                {
+                    Runway newRunway1 = new Runway();
+                    Runway newRunway2 = new Runway();
+
+                    newRunway1.Name = WebScrape(XRoot + "table[" + j.ToString() + "]/tr[5]/td[2]", doc).InnerText;
+                    newRunway2.Name = WebScrape(XRoot + "table[" + j.ToString() + "]/tr[5]/td[4]", doc).InnerText;
+
+                    string Dim = WebScrape(XRoot + "table[" + j.ToString() + "]/tr[1]/td[2]", doc).InnerText;
+                    string[] dim = Dim.Replace(" ", "").Split('/')[0].Replace("ft.", "").Split('x');
+                    newRunway1.Dimensions = new int[] { Int32.Parse(dim[0]), Int32.Parse(dim[1])};
+                    newRunway2.Dimensions = new int[] { Int32.Parse(dim[0]), Int32.Parse(dim[1]) };
+
+                    string elevation1 = WebScrape(XRoot + "table[" + j.ToString() + "]/tr[8]/td[2]", doc).InnerText.Replace(" ft.", "");
+                    string elevation2 = WebScrape(XRoot + "table[" + j.ToString() + "]/tr[8]/td[4]", doc).InnerText.Replace(" ft.", "");
+                    newRunway1.Elevation = Int32.Parse(elevation1);
+                    newRunway2.Elevation = Int32.Parse(elevation2);
+
+                    rList.Add(newRunway1);
+                    rList.Add(newRunway2);
+                }
+            }
+            string info = WebScrape( , url);
+        }
+
+
         public airportInfo(string AIname)
         {
             this.name = AIname;
+            this.runwayinfo = "";
         }
         public override string ToString()
         {
             return name;
-        }     
-      }
 
+        }
+
+
+        public string Getrunwayinfo()
+        {
+            return runwayinfo;
+        }
+        public void Setrunwayinfo(string AIrunway)
+        {
+            runwayinfo = AIrunway;
+        }
+        public HtmlNode WebScrape(string xpath, HtmlDocument doc)
+        {
+            return doc.DocumentNode.SelectNodes(xpath)[0];
+        }
+
+
+    }
+   
         /* public static class lol
 
         {
