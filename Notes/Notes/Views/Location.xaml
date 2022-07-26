@@ -27,24 +27,30 @@
                      Spacing="15"
                      BackgroundColor="White">
             <Label Text="Location:" 
-                FontSize="19">
+                FontSize="19"
+                   x:Name="locDisplay">
 
 
             </Label>
             <Label Text="Temperature:" 
-                FontSize="19">
+                FontSize="19"
+                   x:Name="tempDisplay">
             </Label>
             <Label Text="Wind Speed:" 
-                FontSize="19">
+                FontSize="19"
+                   x:Name="windDisplay">
             </Label>
             <Label Text="Runway Name:" 
-                FontSize="19">
+                FontSize="19"
+                   x:Name="runwayName">
             </Label>
             <Label Text="Runway Dimensions:" 
-                FontSize="19">
+                FontSize="19"
+                   x:Name="runwayDim">
             </Label>
             <Label Text="Runway Elevation:" 
-                FontSize="19">
+                FontSize="19"
+                   x:Name="runwayElv">
             </Label>
 
         </StackLayout>
