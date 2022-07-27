@@ -41,14 +41,8 @@
           
             <Grid HeightRequest="60"
                 ColumnDefinitions="*,*">
-                <Button Text="Takeoff"
-                    Clicked="OnButtonClicked_T"
-                        />
-                <Button Grid.Column="1"
-                    Text="Landing"
-                    Clicked="OnButtonClicked_L"
-                        />
-
+                <Button x:Name= "takeOffButton" Text= "Take Off" Clicked=" Button_Clicked"/>
+                <Button x:Name="landingButton" Grid.Column="1" Text="Landing" Clicked="Button_Clicked"/>
             </Grid>
             <Image 
                 Source="goodhomepic.png"
