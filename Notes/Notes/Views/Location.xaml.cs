@@ -49,8 +49,8 @@ namespace Notes.Views
 
                 HtmlWeb web = new HtmlWeb();
 
-                airportDoc = web.Load(airports + dic1[locationPicker.SelectedItem.ToString()][0]);
-                weatherDoc = web.Load(weather + dic1[locationPicker.SelectedItem.ToString()][1]);
+                HtmlDocument airportDoc = web.Load(airports + dic1[locationPicker.SelectedItem.ToString()][0]);
+                HtmlDocument weatherDoc = web.Load(weather + dic1[locationPicker.SelectedItem.ToString()][1]);
 
                 var loc = weatherDoc.DocumentNode.SelectNodes("/html/body/div[1]/main/div[2]/main/div[1]/div/section/div/div[1]/h1").First().InnerText;
                 locDisplay.Text = loc;
