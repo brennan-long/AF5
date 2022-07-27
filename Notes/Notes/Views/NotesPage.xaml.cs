@@ -28,16 +28,27 @@ namespace Notes.Views
 
         }
 
-        void OnButtonClicked_T(object sender, EventArgs e)
+       private void Button_Clicked(object sender, EventArgs e)
         {
-           
-        }
+            if ((sender as Button) == takeOffButton)
+            { Info.takeoff = true;
+                takeOffButton.Scale = 1.0;
+                landingButton.Scale = 0.9;
 
-        void OnButtonClicked_L(object sender, EventArgs e)
-        {         
-                     
-        }
+                takeOffButton.BackgroundColor = Color.Red;
+                landingButton.BackgroundColor = Color.LightGray;
+            }
+            else if ((sender as Button) == landingButton)
+            {
+                Info.takeoff = false;
+                landingButton.Scale = 1.0;
+                takeOffButton.Scale = 0.9;
 
+                landingButton.BackgroundColor = Color.Red;
+                takeOffButton.BackgroundColor = Color.LightGray;
+            }
+        }
+        
         private void picker1_SelectedIndexChanged(object sender, EventArgs e)
         {
            
@@ -48,6 +59,7 @@ namespace Notes.Views
     static class Info
     {
         static public planeInfo currentPlane = null;
+        static public bool takeoff;
     }
 
     public class planeInfo
