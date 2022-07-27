@@ -17,17 +17,14 @@ namespace Notes.Views
     {
         public HtmlDocument airportDoc;
         public HtmlDocument weatherDoc;
-        public string airports;
-        public string weather;
+        public string airports = "https://www.airnav.com/airports/";
+        public string weather = "https://weather.com/weather/today/l/";
+        string runway = "/html/body/table[5]/tr/td[1]/h4";
         public Location()
         {
             InitializeComponent();
 
-            airports = "https://www.airnav.com/airports/";
-            weather = "https://weather.com/weather/today/l/";
-
-            HtmlWeb web = new HtmlWeb();
-
+           
             Dictionary<string, string[]> dic1 = new Dictionary<string, string[]>();
             dic1.Add("Robins Air Force Base", new string[] { "KWRB", "bf68a280de7675457e6bbc0bf18f95d4da42875e86ac5dd7f19a243ec918f978" });
             dic1.Add("Hill Air Force Base", new string[] { "KHIF", "b8a1ed216efdd87df356b711c371026bc333c20afe1cfec33da8a3e33e9785f8" });
@@ -49,6 +46,8 @@ namespace Notes.Views
             locationPicker.SelectedIndexChanged += (sender, args) =>
             {
                 runwayPicker.Items.Clear();
+
+                HtmlWeb web = new HtmlWeb();
 
                 airportDoc = web.Load(airports + dic1[locationPicker.SelectedItem.ToString()][0]);
                 weatherDoc = web.Load(weather + dic1[locationPicker.SelectedItem.ToString()][1]);

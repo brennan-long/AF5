@@ -12,13 +12,14 @@
                 VerticalOptions="Start"
                 FontSize="22"
                x:Name="locationPicker"
-               PropertyChanged="locationPicker_changed"/>
+                />
 
         <Picker Title=" Select A Runway"
                 TitleColor="White"
                 TextColor="White"
                 VerticalOptions="End"
                 FontSize="22"
+                x:Name="runwayPicker"
                 
                />
         
