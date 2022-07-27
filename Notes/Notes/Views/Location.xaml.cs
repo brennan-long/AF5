@@ -49,6 +49,7 @@ namespace Notes.Views
 
                 HtmlWeb web = new HtmlWeb();
 
+
                 airportDoc = web.Load(airports + dic1[locationPicker.SelectedItem.ToString()][0]);
                 weatherDoc = web.Load(weather + dic1[locationPicker.SelectedItem.ToString()][1]);
 
