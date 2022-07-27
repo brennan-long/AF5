@@ -19,7 +19,7 @@ namespace Notes.Views
         public HtmlDocument weatherDoc;
         public string airports = "https://www.airnav.com/airports/";
         public string weather = "https://weather.com/weather/today/l/";
-        string runway = "/html/body/table[5]/tr/td[1]/h4";
+        string runway = "/html/body/table[5]/tr/td[1]/h4[1]";
         public Location()
         {
             InitializeComponent();
