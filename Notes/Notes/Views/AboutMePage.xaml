@@ -22,26 +22,21 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-                <Image Source=""/>
+                <Image Source="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Trollface_non-free.png/220px-Trollface_non-free.png"
+                       HeightRequest="110"/>
                 <Label Text="This was our App Project and here are a couple of links :)"
                     FontSize="20"
                    FontAttributes="Bold"
                    TextColor="LawnGreen"
                    />
-              <Button Text="Brandon's Instagram"                    
-                    Clicked="OnButtonClicked_1"/>
-            <Button Text="Brennan's Instagram"                    
-                    Clicked="OnButtonClicked_2"/>            
-            
-                
+              
               <Button Text="Info About 402 SWEG"                    
                     Clicked="OnButtonClicked_3"/>
-                <Button Text="Favorite Music"                    
-                    Clicked="OnButtonClicked_4"/>
-                
                 
                 <Button Text="More About Me"                    
                     Clicked="OnButtonClicked"/>
+                <Image Source="https://i.imgflip.com/6b3mea.jpg"
+                       HeightRequest="250"/>
 
             </StackLayout>
     </Grid>

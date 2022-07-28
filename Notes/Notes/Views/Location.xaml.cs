@@ -17,10 +17,11 @@ namespace Notes.Views
     {
         public HtmlDocument airportDoc;
         public HtmlDocument weatherDoc;
-        public string airports = "https://www.airnav.com/airports/";
+        public string airports = "https://www.airnav.com/airport/";
         public string weather = "https://weather.com/weather/today/l/";
 
-        string runway = "/html/body/table[5]/tr/td[1]/h4[1]";
+
+        public string runway = "/html/body/table[5]/tr/td[1]/h4[1]";
         public Location()
         {
             InitializeComponent();
