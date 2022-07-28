@@ -28,37 +28,47 @@
                      Spacing="15"
                      BackgroundColor="White">
             <Label Text="Location:" 
-                FontSize="19"
-                   />
-
+                FontSize="25"
+                   FontAttributes="Bold,Italic"/>
             <Label Text="" 
                 FontSize="19"
                    x:Name="locDisplay"/>
-
-
-
             <Label Text="Temperature: (F)"
-                     FontSize="19"></Label>
+                     FontSize="25"
+                    FontAttributes="Bold,Italic">             
+            </Label>
             <Label Text="" 
                 FontSize="19"
                    x:Name="tempDisplay">
             </Label>
             <Label Text="Wind Speed:" 
-                FontSize="19"></Label>
-                   
-                <Label Text="Wind Speed:" 
+                FontSize="25"
+                    FontAttributes="Bold,Italic"></Label>                   
+                <Label Text="" 
                 FontSize="19"
                    x:Name="windDisplay">
             </Label>
-            <Label Text="Runway Name:" 
+            <Label Text="Runway Name:"
+                     FontSize="25"
+                    FontAttributes="Bold,Italic">                
+            </Label>
+            <Label  
                 FontSize="19"
                    x:Name="runwayName">
             </Label>
-            <Label Text="Runway Dimensions:" 
+            <Label Text="Runway Dimensions:"
+                     FontSize="25"
+                    FontAttributes="Bold,Italic">                
+            </Label>
+            <Label 
                 FontSize="19"
                    x:Name="runwayDim">
             </Label>
-            <Label Text="Runway Elevation:" 
+            <Label Text="Runway Elevation:"
+                     FontSize="25"
+                    FontAttributes="Bold,Italic">                
+            </Label>
+            <Label  
                 FontSize="19"
                    x:Name="runwayElv">
             </Label>
